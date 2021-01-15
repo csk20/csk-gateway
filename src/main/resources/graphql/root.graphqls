@@ -1,17 +1,18 @@
+
 schema {
           query: Query
-          subscription: Subscription    
+      #    subscription: Subscription    
  }
       
  type Query{
      testQuery: String     
   }
   
- type Subscription{
-     testQuery: String     
-  }
+ #type Subscription{
+  #   testQuery: String     
+  #}
   
   
- type Mutation{
-     testQuery: String     
-  }
+ #type Mutation{
+  #   testQuery: String     
+  #}

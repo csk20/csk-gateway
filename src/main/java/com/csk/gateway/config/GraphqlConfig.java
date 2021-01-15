@@ -5,8 +5,6 @@ import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Stream;
-
 import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
@@ -55,8 +53,8 @@ public class GraphqlConfig {
 	public GraphQL graphQl(GraphQLSchema schema, ExecutionStrategyProvider provider) {
 		return GraphQL.newGraphQL(schema)
 .queryExecutionStrategy(provider.getQueryExecutionStrategy())
-.subscriptionExecutionStrategy(provider.getSubscriptionExecutionStrategy())
-.mutationExecutionStrategy(provider.getMutationExecutionStrategy())
+//.subscriptionExecutionStrategy(provider.getSubscriptionExecutionStrategy())
+//.mutationExecutionStrategy(provider.getMutationExecutionStrategy())
 .build();
 	}
 
