@@ -1,0 +1,30 @@
+extend type Query {
+    customer : CustomerService
+    user :userService
+  }
+ 
+
+ extend type Mutation {
+    customerSearch : CustomerSerch
+    
+ }
+ 
+ type CustomerSearch {
+ add(request:UserRequestDTO, userId: String!,userData : [KeyValue]): UserResponseDTO
+ delete(userId: String!): Boolean
+ }
+ 
+ input KeyValue{
+ key :String
+ value: String
+ }
+ 
+ input UserRequestDTO{
+ userId: String
+ userName: String
+ }
+ 
+ type UserResponseDTO {
+ userId : String
+ }
+ 
