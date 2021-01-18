@@ -53,8 +53,8 @@ public class GraphqlConfig {
 	public GraphQL graphQl(GraphQLSchema schema, ExecutionStrategyProvider provider) {
 		return GraphQL.newGraphQL(schema)
 .queryExecutionStrategy(provider.getQueryExecutionStrategy())
-//.subscriptionExecutionStrategy(provider.getSubscriptionExecutionStrategy())
-//.mutationExecutionStrategy(provider.getMutationExecutionStrategy())
+.subscriptionExecutionStrategy(provider.getSubscriptionExecutionStrategy())
+.mutationExecutionStrategy(provider.getMutationExecutionStrategy())
 .build();
 	}
 

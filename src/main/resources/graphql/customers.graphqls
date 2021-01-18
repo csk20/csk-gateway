@@ -1,12 +1,27 @@
-#extend type Query {
- #   customer : CustomerService
-  #  user :userService
-  #}
+extend type Query {
+   customer : CustomerSearch
+  
+  }
  
 
  extend type Query {
-    customerSearch : CustomerService
+    customerService : CustomerService
     
+ }
+ 
+ extend type Query {
+     user : UserService
+    
+ } 
+ 
+ type CustomerSearch {
+ search(userId: String!): UserResponseDTO
+
+ }
+ 
+  type UserService {
+ addUser(request:UserRequestDTO, userId: String!,userData : [KeyValue]): UserResponseDTO
+ deleteUser(userId: String!): Boolean
  }
  
  type CustomerService {
@@ -28,3 +43,4 @@
  userId : String
  }
  
+

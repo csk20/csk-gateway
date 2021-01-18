@@ -1,7 +1,8 @@
 
 schema {
           query: Query
-      #    subscription: Subscription    
+  #   subscription: Subscription  
+ #  mutation : Mutation   
  }
       
  type Query{
